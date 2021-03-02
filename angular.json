@@ -28,9 +28,17 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/jquery-bracket/dist/jquery.bracket.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-bracket/dist/jquery.bracket.min.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "jquery"
+           ]
           },
           "configurations": {
             "production": {
@@ -92,6 +100,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +132,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "zebra-tournament"
+    }
+  },
+  "defaultProject": "zebra-tournament",
+  "cli": {
+    "analytics": "5eefd24c-415b-4a52-a209-77da8f15bb9b"
+  }
 }

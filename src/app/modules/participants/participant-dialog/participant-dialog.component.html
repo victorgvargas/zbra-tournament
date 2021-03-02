@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Adicionar participante</h2>
+<mat-divider></mat-divider>
+<form [formGroup]="form">
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Celular</mat-label>
+      <input
+        placeholder="(XX) XXXXX-XXXX"
+        angularFormsMask="(DD) DDDDD-DDDD"
+        matInput
+        formControlName="phoneNumber"
+        [validateMaskInput]="true"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Fechar</button>
+    <button
+      mat-button
+      [disabled]="!form.valid || compareObjects(form.value, data)"
+      [mat-dialog-close]="form.value"
+    >
+      Adicionar
+    </button>
+  </div>
+</form>
